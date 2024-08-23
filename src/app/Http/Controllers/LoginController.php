@@ -11,6 +11,9 @@ class LoginController extends Controller
     public function index(){
         return View('login');
     }
+    public function register(){
+        return View('login');
+    }
     public function handleLogin(LoginRequest $request){
         // lấy data kiểu advance
             //dd($request->all());

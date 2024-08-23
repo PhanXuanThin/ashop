@@ -22,7 +22,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 p-0">
                         <div class="categories__item set-bg" data-setbg="img/categories/category-2.jpg">
                             <div class="categories__text">
-                                <h4>men</h4>
+                                <h4>Men’s fashion</h4>
                                 <p>358 items</p>
                                 <a href="#">Shop now</a>
                             </div>
@@ -67,8 +67,6 @@
                         <div class="section-title">
                             <h4>New product</h4>
                         </div>
-                       
-                        
                     </div>
                     <div class="col-lg-8 col-md-8">
                         <ul class="filter__controls">
@@ -93,9 +91,7 @@
                                 </ul>
                             </div>
                             <div class="product__item__text">
-                                @foreach($products as $product)
-                               
-                                <h6><a href="#">{{ $product->name }}</a></h6>
+                                <h6><a href="#">Buttons tweed blazer</a></h6>
                                 <div class="rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -103,9 +99,8 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <div class="product__price">{{ $product->price }}</div>
+                                <div class="product__price">$ 59.0</div>
                             </div>
-                            @endforeach
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 mix men">
@@ -126,7 +121,7 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <div class="product__price">{{ $product->price }}</div>
+                                <div class="product__price">$ 49.0</div>
                             </div>
                         </div>
                     </div>
@@ -306,53 +301,111 @@
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="trend__content">
                             <div class="section-title">
-                                <h4>Coupons</h4>
+                                <h4>Hot Trend</h4>
                             </div>
-                    
-                            @foreach($coupons as $coupon)
                             <div class="trend__item">
-                                {{-- <div class="trend__item__pic">
-                                    <img src="{{ asset('img/addressses/' . $addresss->image) }}" alt="{{ $addresss->street }}">
-                                </div> --}}
+                                <div class="trend__item__pic">
+                                    <img src="img/trend/ht-1.jpg" alt>
+                                </div>
                                 <div class="trend__item__text">
-                                    <h6>{{ $coupon->code }}, {{ $coupon->description }}</h6>
-                                    <div class="addresss__details">
-                                        <p>{{ $coupon->discount_type }}, {{ $coupon->start_date }}</p>
+                                    <h6>Chain bucket bag</h6>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
                                     </div>
+                                    <div class="product__price">$ 59.0</div>
                                 </div>
                             </div>
-                            @endforeach
-                    
+                            <div class="trend__item">
+                                <div class="trend__item__pic">
+                                    <img src="img/trend/ht-2.jpg" alt>
+                                </div>
+                                <div class="trend__item__text">
+                                    <h6>Pendant earrings</h6>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="product__price">$ 59.0</div>
+                                </div>
+                            </div>
+                            <div class="trend__item">
+                                <div class="trend__item__pic">
+                                    <img src="img/trend/ht-3.jpg" alt>
+                                </div>
+                                <div class="trend__item__text">
+                                    <h6>Cotton T-Shirt</h6>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="product__price">$ 59.0</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                     
-                
-                     
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="trend__content">
                             <div class="section-title">
                                 <h4>Best seller</h4>
                             </div>
-                            @foreach($bestseller as $bestSeller)
-                                    <div class="trend__item">
-                                        <div class="trend__item__pic">
-                                            <img src="img/trend/bs-1.jpg" alt>
-                                        </div>
-                                        <div class="trend__item__text">
-                                            <h6>{{ $bestSeller->product_name }}</h6>
-                                            <div class="rating">
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                                <i class="fa fa-star"></i>
-                                            </div>
-                                            <div class="product__price">>{{ $bestSeller->price }}</div>
-                                        </div>
+                            <div class="trend__item">
+                                <div class="trend__item__pic">
+                                    <img src="img/trend/bs-1.jpg" alt>
+                                </div>
+                                <div class="trend__item__text">
+                                    <h6>Cotton T-Shirt</h6>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
                                     </div>
-                            @endforeach
-                            
+                                    <div class="product__price">$ 59.0</div>
+                                </div>
+                            </div>
+                            <div class="trend__item">
+                                <div class="trend__item__pic">
+                                    <img src="img/trend/bs-2.jpg" alt>
+                                </div>
+                                <div class="trend__item__text">
+                                    <h6>Zip-pockets pebbled tote <br/>briefcase</h6>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="product__price">$ 59.0</div>
+                                </div>
+                            </div>
+                            <div class="trend__item">
+                                <div class="trend__item__pic">
+                                    <img src="img/trend/bs-3.jpg" alt>
+                                </div>
+                                <div class="trend__item__text">
+                                    <h6>Round leather bag</h6>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="product__price">$ 59.0</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6">
@@ -360,45 +413,58 @@
                             <div class="section-title">
                                 <h4>Feature</h4>
                             </div>
-                            @foreach($feature as $feature)
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-6 p-0">
-                                        <div class="discount__pic">
-                                            <img src="img/discount.jpg" alt>
-                                        </div>
+                            <div class="trend__item">
+                                <div class="trend__item__pic">
+                                    <img src="img/trend/f-1.jpg" alt>
+                                </div>
+                                <div class="trend__item__text">
+                                    <h6>Bow wrap skirt</h6>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
                                     </div>
-                                    <div class="col-lg-6 p-0">
-                                        <div class="discount__text">
-                                            <div class="discount__text__title">
-                                                <span>{ $feature->title }</span>
-                                                <h2>Summer 2019</h2>
-                                                <h5><span>Sale</span> 50%</h5>
-                                            </div>
-                                            <div class="discount__countdown" id="countdown-time">
-                                                <div class="countdown__item">
-                                                    <span>22</span>
-                                                    <p>Days</p>
-                                                </div>
-                                                <div class="countdown__item">
-                                                    <span>18</span>
-                                                    <p>Hour</p>
-                                                </div>
-                                                <div class="countdown__item">
-                                                    <span>46</span>
-                                                    <p>Min</p>
-                                                </div>
-                                                <div class="countdown__item">
-                                                    <span>05</span>
-                                                    <p>Sec</p>
-                                                </div>
-                                            </div>
-                                            <a href="#">Shop now</a>
-                                        </div>
-                                    </div>
+                                    <div class="product__price">$ 59.0</div>
                                 </div>
                             </div>
-        @endforeach
+                            <div class="trend__item">
+                                <div class="trend__item__pic">
+                                    <img src="img/trend/f-2.jpg" alt>
+                                </div>
+                                <div class="trend__item__text">
+                                    <h6>Metallic earrings</h6>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="product__price">$ 59.0</div>
+                                </div>
+                            </div>
+                            <div class="trend__item">
+                                <div class="trend__item__pic">
+                                    <img src="img/trend/f-3.jpg" alt>
+                                </div>
+                                <div class="trend__item__text">
+                                    <h6>Flap cross-body bag</h6>
+                                    <div class="rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="product__price">$ 59.0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="discount">
             <div class="container">
