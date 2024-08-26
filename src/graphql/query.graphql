@@ -2,5 +2,11 @@ type Query {
     products: [Product!]! @all
     product(id: ID!): Product @field(resolver: "App\\GraphQL\\Mutations\\ProductMutator@getProduct")
 
-    
+    Users: [User!]! @field(resolver: "App\\GraphQL\\Queries\\UserQuery@allUsers")
+    Userss(id: Int!): User @field(resolver: "App\\GraphQL\\Queries\\UserQuery@customItem")
+
+
+    allCoupons: [Coupon!]! @field(resolver: "App\\GraphQL\\Queries\\CouponQuery@allCoupons")
+    coupon(id: Int!): Coupon @field(resolver: "App\\GraphQL\\Queries\\CouponQuery@customCoupon")
+
 }

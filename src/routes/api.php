@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\CategoriesController;
-use App\Http\Controllers\ReviewController;
+
+
+
 
 // Route::post('products', [ProductController::class, 'store']);
 // Route::get('products', [ProductController::class, 'index']);
@@ -17,5 +19,3 @@ Route::apiResource('products', ProductController::class);
 Route::apiResource('customers', CustomerController::class);
 
 Route::apiResource('categories', CategoriesController::class);
-
-Route::apiResource('reviews', ReviewController::class);

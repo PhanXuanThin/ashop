@@ -31,4 +31,15 @@ type Mutation {
   ): Product @field(resolver: "App\\GraphQL\\Mutations\\ProductMutator@updateProduct")
 
    deleteProduct(id: ID!): Product @field(resolver: "App\\GraphQL\\Mutations\\ProductMutator@deleteProduct")
+
+
+  createUser(name: String!, email: String!, password: String!, role: String): User @field(resolver: "App\\GraphQL\\Mutations\\UserMutation@createUser")
+  updateUser(id: Int!, name: String, email: String, password: String, role: String): User @field(resolver: "App\\GraphQL\\Mutations\\UserMutation@updateUser")
+  deleteUser(id: Int!): Boolean @field(resolver: "App\\GraphQL\\Mutations\UserMutation@deleteUser")
+
+    
+  createUser(name: String!, email: String!, password: String!, role: String): User @field(resolver: "App\\GraphQL\\Mutations\\UserMutation@createUser")
+  updateUser(id: Int!, name: String, email: String, password: String, role: String): User @field(resolver: "App\\GraphQL\\Mutations\\UserMutation@updateUser")
+  deleteUser(id: Int!): Boolean @field(resolver: "App\\GraphQL\\Mutations\\UserMutation@deleteUser")
+
 }

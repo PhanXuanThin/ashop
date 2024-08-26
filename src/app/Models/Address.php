@@ -20,7 +20,28 @@ class Address extends Model
         'name_hotel',
         'tel_hotel',
         'address',
-      
+        'full_address',
+        'city',
+        'zipcode',
+        'city_search',
+        'district',
+        'district_search',
+        'ward',
+        'ward_search',
+        'country_code',
+        'summary',
+        'phone_2',
+        'image_url',
+        'website',
+        'coordinates',
+        'place_id',
+        'services',
+        'latitude',
+        'longitude',
+        'ratings_and_comments',
+        'average_price',
+        'intro_text',
+        'google_map'
     ];
 
     public function saleOrders()

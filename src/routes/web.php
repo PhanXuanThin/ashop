@@ -12,7 +12,6 @@ use App\Models\User;
 use App\Models\Product;
 use App\Mail\PostPublished;
 use App\DataTables\UsersDataTable;
-use App\Models\Review;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

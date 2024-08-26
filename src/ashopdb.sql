@@ -8,19 +8,6 @@ CREATE TABLE `users` (
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-CREATE TABLE address (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    type_address VARCHAR(255),
-    business_model VARCHAR(255),
-    status VARCHAR(255),
-    name_hotel VARCHAR(255),
-    tel_hotel VARCHAR(20),
-    address TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
 
 
 -- 2. `customers`
@@ -60,13 +47,6 @@ CREATE TABLE `products` (
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
-INSERT INTO `products` (`name`, `description`, `brand`, `price`, `discounted_price`, `quantity`, `availability`, `available_color`, `available_size`, `promotions`, `image_main`, `image_gallery`)
-VALUES
-('Smartphone X1', 'Latest model with advanced features', 'TechBrand', 799.99, 749.99, 50, TRUE, 'Black, White', '64GB, 128GB, 256GB', 'Summer Sale', 'smartphone_x1_main.jpg', 'smartphone_x1_gallery1.jpg, smartphone_x1_gallery2.jpg'),
-('Wireless Headphones', 'Noise-cancelling headphones with long battery life', 'AudioCo', 199.99, 179.99, 100, TRUE, 'Black', 'One Size', 'Holiday Discount', 'headphones_main.jpg', 'headphones_gallery1.jpg, headphones_gallery2.jpg'),
-('4K Ultra HD TV', '55-inch 4K Ultra HD television with smart features', 'VisionTech', 1199.99, 1099.99, 30, TRUE, 'Silver', '55 Inch', 'Spring Special', 'tv_main.jpg', 'tv_gallery1.jpg, tv_gallery2.jpg'),
-('Gaming Laptop Pro', 'High-performance gaming laptop with powerful specs', 'GameMaster', 1499.99, 1399.99, 20, TRUE, 'Gray', '15.6 Inch', 'Black Friday Sale', 'laptop_main.jpg', 'laptop_gallery1.jpg, laptop_gallery2.jpg'),
-('Bluetooth Speaker', 'Portable Bluetooth speaker with rich sound', 'SoundWave', 89.99, 79.99, 150, TRUE, 'Red, Blue, Black', 'One Size', 'Weekend Deal', 'speaker_main.jpg', 'speaker_gallery1.jpg, speaker_gallery2.jpg');
 
 -- 4. `categories`
 CREATE TABLE `categories` (
@@ -145,14 +125,6 @@ CREATE TABLE `shipping_methods` (
     `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
--- Insert sample reviews with valid customer_id and product_id
-INSERT INTO `reviews` (product_id, customer_id, rating, review, created_at, updated_at)
-VALUES
-    (1, 1, 5, 'Excellent product, highly recommend!', NOW(), NOW()),
-    (1, 2, 4, 'Very good, but there are some minor issues.', NOW(), NOW()),
-    (2, 1, 3, 'Average experience. It could be better.', NOW(), NOW()),  -- Make sure this customer_id and product_id exist
-    (2, 2, 2, 'Not satisfied with the quality.', NOW(), NOW()),        -- Make sure this customer_id and product_id exist
-    (1, 2, 1, 'Terrible experience. Will not purchase again.', NOW(), NOW()); -- Make sure this customer_id and product_id exist
 
 -- 10. `reviews`
 CREATE TABLE `reviews` (
@@ -166,35 +138,6 @@ CREATE TABLE `reviews` (
     FOREIGN KEY (`product_id`) REFERENCES `products`(`id`),
     FOREIGN KEY (`customer_id`) REFERENCES `customers`(`id`)
 );
-INSERT INTO `reviews` (product_id, customer_id, rating, review, created_at, updated_at)
-VALUES
-    (1, 1, 5, 'Excellent product, highly recommend!', NOW(), NOW()),
-    (1, 2, 4, 'Very good, but there are some minor issues.', NOW(), NOW()),
-    (2, 3, 3, 'Average experience. It could be better.', NOW(), NOW()),
-    (3, 4, 2, 'Not satisfied with the quality.', NOW(), NOW()),
-    (4, 5, 1, 'Terrible experience. Will not purchase again.', NOW(), NOW());
-    -- Insert sample customers
-INSERT INTO `customers` (first_name, last_name, email, password, phone, address, city, state, country, postal_code, loyalty_points, status, created_at, updated_at)
-VALUES
-    ('John', 'Doe', 'john.doe@example.com', 'password123', '123-456-7890', '123 Elm St', 'Springfield', 'IL', 'USA', '62701', 100, 'active', NOW(), NOW()),
-    ('Jane', 'Smith', 'jane.smith@example.com', 'password123', '987-654-3210', '456 Oak St', 'Springfield', 'IL', 'USA', '62702', 150, 'active', NOW(), NOW());
-
--- Insert sample products
-INSERT INTO `products` (name, description, price, created_at, updated_at)
-VALUES
-    ('Product A', 'Description for product A', 19.99, NOW(), NOW()),
-    ('Product B', 'Description for product B', 29.99, NOW(), NOW());
--- Insert sample customers
-INSERT INTO `customers` (first_name, last_name, email, password, phone, address, city, state, country, postal_code, loyalty_points, status, created_at, updated_at)
-VALUES
-    ('John', 'Doe', 'john.doe@example.com', 'password123', '123-456-7890', '123 Elm St', 'Springfield', 'IL', 'USA', '62701', 100, 'active', NOW(), NOW()),
-    ('Jane', 'Smith', 'jane.smith@example.com', 'password123', '987-654-3210', '456 Oak St', 'Springfield', 'IL', 'USA', '62702', 150, 'active', NOW(), NOW());
-
--- Insert sample products
-INSERT INTO `products` (name, description, price, created_at, updated_at)
-VALUES
-    ('Product A', 'Description for product A', 19.99, NOW(), NOW()),
-    ('Product B', 'Description for product B', 29.99, NOW(), NOW());
 
 -- 11. `coupons`
 CREATE TABLE `coupons` (

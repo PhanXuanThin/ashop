@@ -18,5 +18,22 @@ type Product {
   created_at: DateTime
   updated_at: DateTime
 }
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    password: String
+    role: String
+    created_at: String
+    updated_at: String
+}
 
 
+type Coupon {
+    id: Int!
+    code: String!
+    discount: Float!
+    expires_at: String
+    created_at: String
+    updated_at: String
+}
